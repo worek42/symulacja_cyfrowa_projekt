@@ -1,6 +1,6 @@
 #include "BloodStorage.h"
 
-
+//costam
 
 BloodStorage::BloodStorage()
 {
