@@ -1,10 +1,11 @@
 #pragma once
+#include "DonationPoint.h"
 class EventsAgenda
 {
-
-
+	
 public:
-	EventsAgenda();
+	DonationPoint *mainDonationPoint;
+	EventsAgenda(DonationPoint*);
 	~EventsAgenda();
 };
 

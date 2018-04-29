@@ -7,6 +7,9 @@ class DonationPoint
 	PatientQueue *patienQueue;
 
 public:
+	void addNewBlood(int);
+	void addNewPatient();
+	void deleteTheOldestBlood();
 	DonationPoint();
 	~DonationPoint();
 };

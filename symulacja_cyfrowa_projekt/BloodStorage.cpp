@@ -44,6 +44,7 @@ bool BloodStorage::isEmpty()
 
 void BloodStorage::addBloodUnit(int utilizationTime)
 {
+	actualBloodUnits++;
 	if (isEmpty())
 	{
 		addFirst(utilizationTime);
@@ -67,6 +68,14 @@ void BloodStorage::disp()
 	for (BloodUnitLink *temp = FirstBloodUnit; temp; temp = temp->nextBloodUnit)
 		std::cout << temp->getUtilizationTimeFromBloodUnit() << "\t";
 	std::cout << std::endl;
+}
+
+void BloodStorage::deleteFirst()
+{
+	BloodUnitLink *temp = FirstBloodUnit->nextBloodUnit;
+	delete FirstBloodUnit;
+	FirstBloodUnit = temp;
+	actualBloodUnits--;
 }
 
 BloodStorage::~BloodStorage()

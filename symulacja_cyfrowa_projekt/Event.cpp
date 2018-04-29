@@ -7,9 +7,9 @@ void Event::run()
 	return;
 }
 
-Event::Event(EventsAgenda *eventsAgenda)
+Event::Event()
 {
-	this->eventsAgenda = eventsAgenda;
+	
 }
 
 

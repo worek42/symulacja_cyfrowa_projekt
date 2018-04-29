@@ -2,9 +2,9 @@
 
 
 
-EventsAgenda::EventsAgenda()
+EventsAgenda::EventsAgenda(DonationPoint *donationPoint)
 {
-	
+	mainDonationPoint = donationPoint;
 }
 
 
