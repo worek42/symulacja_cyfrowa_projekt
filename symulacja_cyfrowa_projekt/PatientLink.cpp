@@ -2,6 +2,11 @@
 
 
 
+int PatientLink::getPatientID()
+{
+	return patient->getID();
+}
+
 PatientLink::PatientLink(PatientLink *nextPatient)
 {
 	this->patient = new Patient();

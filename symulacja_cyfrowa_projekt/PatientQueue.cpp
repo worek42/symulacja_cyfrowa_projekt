@@ -1,4 +1,5 @@
 #include "PatientQueue.h"
+#include <iostream>
 
 
 
@@ -20,7 +21,10 @@ void PatientQueue::addPatient()
 		return;
 	}
 
-	
+	PatientLink *temp;
+	for (temp = FirstPatient;temp->nextPatient;temp=temp->nextPatient)
+	{ }
+	temp->nextPatient = new PatientLink(nullptr);
 	
 }
 
@@ -29,6 +33,13 @@ void PatientQueue::deletePatient()
 	PatientLink *temp = FirstPatient->nextPatient;
 	delete FirstPatient;
 	FirstPatient = temp;
+}
+
+void PatientQueue::disp()
+{
+	for (PatientLink *temp = FirstPatient; temp; temp = temp->nextPatient)
+		std::cout << temp->getPatientID() << "\t";
+	std::cout << std::endl;
 }
 
 PatientQueue::PatientQueue()

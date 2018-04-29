@@ -9,6 +9,7 @@ public:
 	bool isEmpty();
 	void addPatient();
 	void deletePatient();
+	void disp();
 	PatientQueue();
 	~PatientQueue();
 };

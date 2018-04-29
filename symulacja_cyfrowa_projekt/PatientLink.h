@@ -6,6 +6,7 @@ class PatientLink
 	PatientLink *nextPatient;
 
 public:
+	int getPatientID();
 	PatientLink(PatientLink*);
 	~PatientLink();
 
