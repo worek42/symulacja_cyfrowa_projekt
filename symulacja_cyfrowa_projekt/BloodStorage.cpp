@@ -1,9 +1,40 @@
 #include "BloodStorage.h"
 
-//costam
+
+
+void BloodStorage::addSort(int utilizationTime)
+{
+	BloodUnitLink *temp;
+	for (temp = FirstBloodUnit; temp->nextBloodUnit; temp = temp->nextBloodUnit)
+	{
+		if (temp->nextBloodUnit->getUtilizationTimeFromBloodUnit() > utilizationTime)
+			break;
+	}
+	temp->nextBloodUnit = new BloodUnitLink(utilizationTime, temp->nextBloodUnit);
+}
+
+void BloodStorage::addFirst(int utilizationTime)
+{
+	FirstBloodUnit = new BloodUnitLink(utilizationTime, nullptr);
+}
+
+void BloodStorage::addOnFirstItem(int utilizationTime)
+{
+	FirstBloodUnit = new BloodUnitLink(utilizationTime, FirstBloodUnit);
+}
+
+void BloodStorage::addOnBlankSecondItem(int utilizationTime)
+{
+	FirstBloodUnit->nextBloodUnit = new BloodUnitLink(utilizationTime, nullptr);
+}
 
 BloodStorage::BloodStorage()
 {
+}
+
+bool BloodStorage::isOrdered()
+{
+	return Order;
 }
 
 bool BloodStorage::isEmpty()
@@ -15,11 +46,28 @@ void BloodStorage::addBloodUnit(int utilizationTime)
 {
 	if (isEmpty())
 	{
-		FirstBloodUnit = new BloodUnitLink(utilizationTime, nullptr);
+		addFirst(utilizationTime);
 		return;
 	}
+
+	if (FirstBloodUnit->getUtilizationTimeFromBloodUnit() > utilizationTime)
+	{
+		addOnFirstItem(utilizationTime);
+		return;
+	}
+
+	if (FirstBloodUnit->nextBloodUnit)
+		addSort(utilizationTime);
+	else
+		addOnBlankSecondItem(utilizationTime);
 }
 
+void BloodStorage::disp()
+{
+	for (BloodUnitLink *temp = FirstBloodUnit; temp; temp = temp->nextBloodUnit)
+		std::cout << temp->getUtilizationTimeFromBloodUnit() << "\t";
+	std::cout << std::endl;
+}
 
 BloodStorage::~BloodStorage()
 {

@@ -2,6 +2,11 @@
 
 int BloodUnit::iDHandler = 0;
 
+int BloodUnit::getUtilizationTime()
+{
+	return utilizationTime;
+}
+
 BloodUnit::BloodUnit(int utilizationTime)
 {
 	this->utilizationTime = utilizationTime;

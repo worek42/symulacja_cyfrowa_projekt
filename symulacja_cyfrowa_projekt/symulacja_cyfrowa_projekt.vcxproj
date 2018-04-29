@@ -120,6 +120,8 @@
     <ClCompile Include="BloodUnitLink.cpp" />
     <ClCompile Include="donor.cpp" />
     <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="PatientLink.cpp" />
+    <ClCompile Include="PatientQueue.cpp" />
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +130,8 @@
     <ClInclude Include="BloodUnitLink.h" />
     <ClInclude Include="donor.h" />
     <ClInclude Include="Patient.h" />
+    <ClInclude Include="PatientLink.h" />
+    <ClInclude Include="PatientQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
