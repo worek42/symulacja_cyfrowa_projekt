@@ -7,7 +7,8 @@ class Patient
 	const int W = 5;				//zmienna W z zadania
 
 public:
-	int getID();
+	int getID();					//pozyskanie ID pacjenta
+	int getUnit();					//pozyskanie jednotek krwi potrzebnych pacjentowi
 	Patient();
 	~Patient();
 };

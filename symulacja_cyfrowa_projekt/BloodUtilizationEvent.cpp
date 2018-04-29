@@ -2,16 +2,17 @@
 
 
 
-BloodUtilizationEvent::BloodUtilizationEvent(Event *nextEvent, EventsAgenda *eventsAgenda)
+BloodUtilizationEvent::BloodUtilizationEvent(Event *nextEvent, EventsAgenda *eventsAgenda,int apperanceTime)
 {
 	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
+	this->apperanceTime = apperanceTime;
 }
 
 
 void BloodUtilizationEvent::run()
 {
-	eventsAgenda->mainDonationPoint->deleteTheOldestBlood();
+	eventsAgenda->mainDonationPoint->deleteTheOldestBlood();		//usuniecie najstarszej krwi
 }
 
 BloodUtilizationEvent::~BloodUtilizationEvent()

@@ -1,6 +1,6 @@
 #include "Patient.h"
 
-int generator(int average)
+int generator2(int average)
 {
 	return average;
 }
@@ -11,10 +11,15 @@ int generator(int average)
 		return ID;
 	}
 
+	int Patient::getUnit()
+	{
+		return unitOfBloodNeeded;
+	}
+
 	Patient::Patient()
 {
 	ID = ++iDHandler;
-	unitOfBloodNeeded = generator(W);
+	unitOfBloodNeeded = generator2(W);
 }
 
 Patient::~Patient()

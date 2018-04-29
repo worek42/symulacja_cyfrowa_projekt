@@ -20,7 +20,8 @@ public:
 	bool isEmpty();						//metoda sprawdzania czy lista jest pusta
 	void addBloodUnit(int);				//dodanie obiektu krwi do listy
 	void disp();						//sprawdzanie dzialania listy
-	void deleteFirst();
+	void deleteFirst();					//usuniecie pierwszego pacjenta
+	void changeOrder(bool);				//zmiana zmiennej Order
 	~BloodStorage();
 };
 

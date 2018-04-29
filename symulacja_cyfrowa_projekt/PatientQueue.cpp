@@ -42,6 +42,11 @@ void PatientQueue::disp()
 	std::cout << std::endl;
 }
 
+int PatientQueue::getFirstPatientBlood()
+{
+	return FirstPatient->getBlood();
+}
+
 PatientQueue::PatientQueue()
 {
 }

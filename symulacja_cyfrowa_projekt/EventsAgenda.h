@@ -4,7 +4,7 @@ class EventsAgenda
 {
 	
 public:
-	DonationPoint *mainDonationPoint;
+	DonationPoint *mainDonationPoint;		//wskaznik na punkt krwiodawstwa
 	EventsAgenda(DonationPoint*);
 	~EventsAgenda();
 };

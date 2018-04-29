@@ -13,7 +13,6 @@ BloodUnit::BloodUnit(int utilizationTime)
 	ID = ++iDHandler;
 }
 
-
 BloodUnit::~BloodUnit()
 {
 }

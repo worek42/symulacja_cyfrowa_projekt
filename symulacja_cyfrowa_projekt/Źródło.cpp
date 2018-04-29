@@ -10,6 +10,7 @@ int main()
 	 a.addPatient();
 	 a.addPatient();
 	 a.addPatient();
+	 a.deletePatient();
 	 a.addPatient();
 	 a.disp();
 

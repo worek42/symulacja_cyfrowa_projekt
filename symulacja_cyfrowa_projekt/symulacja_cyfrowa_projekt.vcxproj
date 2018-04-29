@@ -115,21 +115,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AlertDeliverenceEvent.cpp" />
     <ClCompile Include="BloodStorage.cpp" />
+    <ClCompile Include="BloodTransfusionEvent.cpp" />
     <ClCompile Include="BloodUnit.cpp" />
     <ClCompile Include="BloodUnitLink.cpp" />
+    <ClCompile Include="BloodUtilizationEvent.cpp" />
+    <ClCompile Include="DeliverenceEvent.cpp" />
+    <ClCompile Include="DonationPoint.cpp" />
     <ClCompile Include="donor.cpp" />
+    <ClCompile Include="donorEvent.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventsAgenda.cpp" />
+    <ClCompile Include="NewUnitsDeliverenceEvent.cpp" />
     <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="patientEvent.cpp" />
     <ClCompile Include="PatientLink.cpp" />
     <ClCompile Include="PatientQueue.cpp" />
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlertDeliverenceEvent.h" />
     <ClInclude Include="BloodStorage.h" />
+    <ClInclude Include="BloodTransfusionEvent.h" />
     <ClInclude Include="BloodUnit.h" />
     <ClInclude Include="BloodUnitLink.h" />
+    <ClInclude Include="BloodUtilizationEvent.h" />
+    <ClInclude Include="DeliverenceEvent.h" />
+    <ClInclude Include="DonationPoint.h" />
     <ClInclude Include="donor.h" />
+    <ClInclude Include="donorEvent.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventsAgenda.h" />
+    <ClInclude Include="NewUnitsDeliverenceEvent.h" />
     <ClInclude Include="Patient.h" />
+    <ClInclude Include="patientEvent.h" />
     <ClInclude Include="PatientLink.h" />
     <ClInclude Include="PatientQueue.h" />
   </ItemGroup>

@@ -78,6 +78,11 @@ void BloodStorage::deleteFirst()
 	actualBloodUnits--;
 }
 
+void BloodStorage::changeOrder(bool changed)
+{
+	Order = changed;
+}
+
 BloodStorage::~BloodStorage()
 {
 	for (BloodUnitLink *temp = FirstBloodUnit; temp; temp = FirstBloodUnit)
