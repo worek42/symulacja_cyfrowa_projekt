@@ -5,9 +5,8 @@ int generator(int averrage)
 	return averrage;
 }
 
-patientEvent::patientEvent(Event *nextEvent, EventsAgenda *eventsAgenda)
+patientEvent::patientEvent(EventsAgenda *eventsAgenda)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 	apperanceTime = generator(P);
 }

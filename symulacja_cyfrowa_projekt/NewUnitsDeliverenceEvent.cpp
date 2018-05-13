@@ -2,9 +2,8 @@
 
 
 
-NewUnitsDeliverenceEvent::NewUnitsDeliverenceEvent(Event* nextEvent,EventsAgenda *eventsAgenda)
+NewUnitsDeliverenceEvent::NewUnitsDeliverenceEvent(EventsAgenda *eventsAgenda)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 }
 

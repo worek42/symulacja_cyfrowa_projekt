@@ -2,9 +2,8 @@
 
 
 
-BloodTransfusionEvent::BloodTransfusionEvent(Event* nextEvent, EventsAgenda *eventsAgenda)
+BloodTransfusionEvent::BloodTransfusionEvent(EventsAgenda *eventsAgenda)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 }
 

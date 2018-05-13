@@ -3,11 +3,9 @@
 class BloodTransfusionEvent :
 	public Event
 {
-	EventsAgenda *eventsAgenda;						//wskaznik na kalendarz zdarzen
-	Event *nextEvent;								//wskaznik na nastepne zdarzenie
 
 public:
-	BloodTransfusionEvent(Event*,EventsAgenda*);
+	BloodTransfusionEvent(EventsAgenda*);
 	void run();										//wykonanie zdarzenia
 	~BloodTransfusionEvent();
 };

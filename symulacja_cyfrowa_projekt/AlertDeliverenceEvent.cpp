@@ -2,9 +2,8 @@
 
 double AlertDeliverenceEvent::EW = 0.2;
 
-AlertDeliverenceEvent::AlertDeliverenceEvent(Event* nextEvent, EventsAgenda *eventsAgenda)
+AlertDeliverenceEvent::AlertDeliverenceEvent(EventsAgenda *eventsAgenda)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 }
 

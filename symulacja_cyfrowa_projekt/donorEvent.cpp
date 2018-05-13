@@ -4,10 +4,9 @@ int generator1(int averrage)
 	return averrage;
 }
 
-donorEvent::donorEvent(Event *nextEvent,EventsAgenda *eventsAgenda)
+donorEvent::donorEvent(EventsAgenda *eventsAgenda)
 {
 	this->eventsAgenda = eventsAgenda;
-	this->nextEvent = nextEvent;
 	apperanceTime = generator1(L);
 }
 

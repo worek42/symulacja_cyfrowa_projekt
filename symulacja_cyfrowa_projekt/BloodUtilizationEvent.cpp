@@ -2,11 +2,11 @@
 
 
 
-BloodUtilizationEvent::BloodUtilizationEvent(Event *nextEvent, EventsAgenda *eventsAgenda,int apperanceTime)
+BloodUtilizationEvent::BloodUtilizationEvent(EventsAgenda *eventsAgenda,int apperanceTime)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 	this->apperanceTime = apperanceTime;
+	utilizationEvent = true;
 }
 
 

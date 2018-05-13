@@ -2,9 +2,8 @@
 
 
 
-DeliverenceEvent::DeliverenceEvent(Event *nextEvent, EventsAgenda *eventsAgenda,int numberOfBloodUnits,int apperanceTime)
+DeliverenceEvent::DeliverenceEvent(EventsAgenda *eventsAgenda,int numberOfBloodUnits,int apperanceTime)
 {
-	this->nextEvent = nextEvent;
 	this->eventsAgenda = eventsAgenda;
 	this->numberOfBloodUnits = numberOfBloodUnits;
 	this->apperanceTime = apperanceTime;
