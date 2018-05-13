@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="accidentEvent.cpp" />
     <ClCompile Include="AlertDeliverenceEvent.cpp" />
     <ClCompile Include="BloodStorage.cpp" />
     <ClCompile Include="BloodTransfusionEvent.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="accidentEvent.h" />
     <ClInclude Include="AlertDeliverenceEvent.h" />
     <ClInclude Include="BloodStorage.h" />
     <ClInclude Include="BloodTransfusionEvent.h" />

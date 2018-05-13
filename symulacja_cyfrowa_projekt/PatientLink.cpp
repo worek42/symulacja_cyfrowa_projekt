@@ -20,4 +20,5 @@ PatientLink::PatientLink(PatientLink *nextPatient)
 
 PatientLink::~PatientLink()
 {
+	delete patient;
 }

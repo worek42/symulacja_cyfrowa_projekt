@@ -42,6 +42,11 @@ bool BloodStorage::isEmpty()
 	return FirstBloodUnit ? false : true;
 }
 
+bool BloodStorage::orderNeeded()
+{
+	return (actualBloodUnits < R) && !Order ? true : false;
+}
+
 void BloodStorage::addBloodUnit(int utilizationTime)
 {
 	actualBloodUnits++;
@@ -81,6 +86,11 @@ void BloodStorage::deleteFirst()
 void BloodStorage::changeOrder(bool changed)
 {
 	Order = changed;
+}
+
+int BloodStorage::getActualBloodUnits()
+{
+	return actualBloodUnits;
 }
 
 BloodStorage::~BloodStorage()

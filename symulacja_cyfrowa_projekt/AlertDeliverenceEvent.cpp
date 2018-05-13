@@ -1,6 +1,7 @@
 #include "AlertDeliverenceEvent.h"
+#include <iostream>
 
-double AlertDeliverenceEvent::EW = 0.2;
+double AlertDeliverenceEvent::EW = 0.1;
 
 AlertDeliverenceEvent::AlertDeliverenceEvent(EventsAgenda *eventsAgenda)
 {
@@ -10,8 +11,10 @@ AlertDeliverenceEvent::AlertDeliverenceEvent(EventsAgenda *eventsAgenda)
 
 void AlertDeliverenceEvent::run()
 {
-	////////////dodaj do kalendarza (EventsAgenda) obiekt DeliverenceEvent////////
+	Event* newEvent = new DeliverenceEvent(eventsAgenda, Q, E);
+	eventsAgenda->addEvent(newEvent);												//dodaæ generator
 	eventsAgenda->mainDonationPoint->changeOrder(true);								//zmiana zmiennej Order
+	std::cout << "Zlecenie awaryjne" << std::endl;
 }
 
 AlertDeliverenceEvent::~AlertDeliverenceEvent()

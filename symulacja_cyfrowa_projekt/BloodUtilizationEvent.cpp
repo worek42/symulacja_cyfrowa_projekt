@@ -1,5 +1,5 @@
 #include "BloodUtilizationEvent.h"
-
+#include <iostream>
 
 
 BloodUtilizationEvent::BloodUtilizationEvent(EventsAgenda *eventsAgenda,int apperanceTime)
@@ -13,6 +13,7 @@ BloodUtilizationEvent::BloodUtilizationEvent(EventsAgenda *eventsAgenda,int appe
 void BloodUtilizationEvent::run()
 {
 	eventsAgenda->mainDonationPoint->deleteTheOldestBlood();		//usuniecie najstarszej krwi
+	std::cout << "Utylizacja krwi" << std::endl;
 }
 
 BloodUtilizationEvent::~BloodUtilizationEvent()

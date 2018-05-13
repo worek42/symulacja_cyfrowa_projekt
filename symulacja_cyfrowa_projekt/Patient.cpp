@@ -1,8 +1,9 @@
 #include "Patient.h"
+#include <iostream>
 
-int generator2(int average)
+int generator2(double average)
 {
-	return average;
+	return 1.0/average;
 }
 	int Patient::iDHandler = 0;
 
@@ -20,6 +21,7 @@ int generator2(int average)
 {
 	ID = ++iDHandler;
 	unitOfBloodNeeded = generator2(W);
+	std::cout << "Nowy pacjent" << std::endl;
 }
 
 Patient::~Patient()

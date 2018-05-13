@@ -1,20 +1,4 @@
-﻿  AlertDeliverenceEvent.cpp
-  BloodStorage.cpp
-  BloodTransfusionEvent.cpp
-  BloodUnit.cpp
-  BloodUnitLink.cpp
-  BloodUtilizationEvent.cpp
-  DeliverenceEvent.cpp
-  DonationPoint.cpp
-  donor.cpp
-  donorEvent.cpp
-  Event.cpp
-  EventsAgenda.cpp
-  NewUnitsDeliverenceEvent.cpp
-  Patient.cpp
-  patientEvent.cpp
-  PatientLink.cpp
-  PatientQueue.cpp
+﻿  DonationPoint.cpp
   Źródło.cpp
   Generowanie kodu...
   symulacja_cyfrowa_projekt.vcxproj -> D:\studia - projekty C++ i C#\test\klon\cos\symulacja_cyfrowa_projekt\x64\Debug\symulacja_cyfrowa_projekt.exe

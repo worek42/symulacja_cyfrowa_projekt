@@ -8,13 +8,7 @@ Event::Event()
 	utilizationEvent = false;
 }
 
-void Event::run()
-{
-	if (apperanceTime == -1)
-		std::cout << "Poczatke listy" << std::endl;
-	else
-		std::cout << "Koniec listy" << std::endl;
-}
+
 
 Event::Event(EventsAgenda *eventsAgenda,int appTime)
 {
@@ -24,6 +18,13 @@ Event::Event(EventsAgenda *eventsAgenda,int appTime)
 	utilizationEvent = false;
 }
 
+void Event::run()
+{
+	if (apperanceTime == -1)
+		std::cout << "Poczatke listy" << std::endl;
+	else
+		std::cout << "Koniec listy" << std::endl;
+}
 
 Event::~Event()
 {

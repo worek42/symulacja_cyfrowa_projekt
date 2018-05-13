@@ -1,10 +1,12 @@
 #pragma once
 #include "Event.h"
+#include "DonationPoint.h"
+#include "BloodUtilizationEvent.h"
 class donorEvent :
 	public Event
 {
-	const static int L = 5;						//zmienna L z zadania
-	const static int T2 = 200;					//zmienna T2 z zadania
+	const static int L = 900;					//zmienna L z zadania
+	const static int T2 = 500;					//zmienna T2 z zadania
 
 public:
 	donorEvent(EventsAgenda*);

@@ -16,4 +16,5 @@ BloodUnitLink::BloodUnitLink(int utilizationTime,BloodUnitLink *nextBloodUnitLin
 
 BloodUnitLink::~BloodUnitLink()
 {
+	delete bloodUnit;
 }

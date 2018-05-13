@@ -1,5 +1,5 @@
 #pragma once
-struct BloodUnit
+class BloodUnit
 {
 	int utilizationTime;			//czas utylizacji jednostki krwi
 	int ID;							//ID jednostki krwi

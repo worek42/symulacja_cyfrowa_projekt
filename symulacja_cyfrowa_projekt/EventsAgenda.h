@@ -1,8 +1,7 @@
 #pragma once
-#include "DonationPoint.h"
-#include "Event.h"
 #include <limits>
-#include <iostream>
+class Event;
+class DonationPoint;
 class EventsAgenda
 {
 	
@@ -12,8 +11,8 @@ public:
 
 	EventsAgenda(DonationPoint*);
 	void addEvent(Event*);					//dodanie zdarzenia do kalendarza
-	void deleteUtilizationEvent();			//usuniecie zdarzenia utylizacji krwi przy wykorzystaniu jej 
-											//przez pacjenta lub przez wypadek
+	void deleteUtilizationEvent();			//usuniecie zdarzenia utylizacji krwi
+	void deleteFirst();
 
 	~EventsAgenda();
 };

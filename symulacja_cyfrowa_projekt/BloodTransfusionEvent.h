@@ -1,5 +1,6 @@
 #pragma once
 #include "Event.h"
+#include "DonationPoint.h"
 class BloodTransfusionEvent :
 	public Event
 {
