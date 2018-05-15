@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\studia - projekty c++ i c#\test\klon\cos\symulacja_cyfrowa_projekt\symulacja_cyfrowa_projekt\</FILEPATH>
+      <FILENAME>predefined c++ types (compiler internal)</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>28285</DEFECTCODE>
+    <DESCRIPTION>Dla funkcji „new” „return” wystąpił błąd składni w elemencie „SAL_writableTo(byteCount(__formal(0,_Size)))” blisko elementu „byteCount(__formal(0”.</DESCRIPTION>
+    <FUNCTION></FUNCTION>
+    <DECORATED></DECORATED>
+    <FUNCLINE>0</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
