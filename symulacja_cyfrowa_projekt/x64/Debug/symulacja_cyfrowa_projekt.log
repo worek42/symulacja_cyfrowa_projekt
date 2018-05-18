@@ -1,2 +1,14 @@
-﻿  Źródło.cpp
+﻿  AlertDeliverenceEvent.cpp
+  BloodStorage.cpp
+  BloodTransfusionEvent.cpp
+  BloodUtilizationEvent.cpp
+  DeliverenceEvent.cpp
+  DonationPoint.cpp
+  EventsAgenda.cpp
+  NewUnitsDeliverenceEvent.cpp
+  accidentEvent.cpp
+  donorEvent.cpp
+  patientEvent.cpp
+  Źródło.cpp
+  Generowanie kodu...
   symulacja_cyfrowa_projekt.vcxproj -> D:\studia - projekty C++ i C#\test\klon\cos\symulacja_cyfrowa_projekt\x64\Debug\symulacja_cyfrowa_projekt.exe

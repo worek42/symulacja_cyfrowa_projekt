@@ -3,7 +3,7 @@
 #include <iostream>
 class BloodStorage
 {
-	const int R = 4;					//zmienna R z zadania
+	const int R = 5;					//zmienna R z zadania
 	const int minimalBloodUnits = R;	//minimalna ilosc jednostek krwi
 	int actualBloodUnits;				//aktualna ilosc jednostek krwi
 	bool Order;							//zmienna oznaczajaca zlozenie zamowienia

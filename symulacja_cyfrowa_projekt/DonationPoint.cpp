@@ -63,27 +63,19 @@ void DonationPoint::start()
 	systemTime = 0;
 
 	startParameters(agenda);
-	
-	while (numberOfAllOrders < 10)
+	bool systemFlag;
+
+	while (numberOfAllOrders < 1000)
 	{
 		systemTime = agenda->FirstEvent->nextEvent->apperanceTime;
-		bool systemFlag = true;
-
-		while (systemFlag)
+		
+		do
 		{
 			systemFlag = false;
 			if (systemTime == agenda->FirstEvent->nextEvent->apperanceTime)
 			{
 				doTimeEvent(agenda);
 				systemFlag = true;
-			}
-
-			if (normalOrderNeeded())
-			{
-				NewUnitsDeliverenceEvent *temp = new NewUnitsDeliverenceEvent(agenda);
-				doEvent(temp);
-				systemFlag = true;
-				numberOfAllOrders++;
 			}
 
 			if (alertOrderNeeded())
@@ -95,6 +87,14 @@ void DonationPoint::start()
 				numberOfAlertOrders++;
 			}
 
+			if (normalOrderNeeded())
+			{
+				NewUnitsDeliverenceEvent *temp = new NewUnitsDeliverenceEvent(agenda);
+				doEvent(temp);
+				systemFlag = true;
+				numberOfAllOrders++;
+			}
+
 			if (transfusionPermition())
 			{
 				BloodTransfusionEvent *temp = new BloodTransfusionEvent(agenda);
@@ -102,7 +102,7 @@ void DonationPoint::start()
 				systemFlag = true;
 			}
 
-		}
+		} while (systemFlag);
 		if (typeOfLoop)
 			getchar();
 	}
