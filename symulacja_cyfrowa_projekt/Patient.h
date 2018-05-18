@@ -10,6 +10,7 @@ public:
 	int getID();					//pozyskanie ID pacjenta
 	int getUnit();					//pozyskanie jednotek krwi potrzebnych pacjentowi
 	Patient();
+	Patient(int);
 	~Patient();
 };
 

@@ -3,7 +3,7 @@
 #include <iostream>
 class BloodStorage
 {
-	const int R = 5;					//zmienna R z zadania
+	const int R = 4;					//zmienna R z zadania
 	const int minimalBloodUnits = R;	//minimalna ilosc jednostek krwi
 	int actualBloodUnits;				//aktualna ilosc jednostek krwi
 	bool Order;							//zmienna oznaczajaca zlozenie zamowienia
@@ -18,7 +18,7 @@ public:
 	BloodStorage();
 	bool isOrdered();					//metoda zwracajaca zajetosc zamowienia
 	bool isEmpty();						//metoda sprawdzania czy lista jest pusta
-	bool orderNeeded();					//zamowienie gdy minimal < R && Order
+	bool normalOrderNeeded();					//zamowienie gdy minimal < R && Order
 	void addBloodUnit(int);				//dodanie obiektu krwi do listy
 	void disp();						//sprawdzanie dzialania listy
 	void deleteFirst();					//usuniecie pierwszego pacjenta

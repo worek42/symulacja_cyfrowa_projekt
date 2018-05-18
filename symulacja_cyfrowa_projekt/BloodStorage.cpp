@@ -42,7 +42,7 @@ bool BloodStorage::isEmpty()
 	return FirstBloodUnit ? false : true;
 }
 
-bool BloodStorage::orderNeeded()
+bool BloodStorage::normalOrderNeeded()
 {
 	return (actualBloodUnits < R) && !Order ? true : false;
 }

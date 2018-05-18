@@ -13,7 +13,7 @@ EventsAgenda::EventsAgenda(DonationPoint *donationPoint)
 void EventsAgenda::addEvent(Event *nextEv)
 {
 	Event *temp = FirstEvent;
-	nextEv->apperanceTime += mainDonationPoint->time;
+	nextEv->apperanceTime += mainDonationPoint->systemTime;
 
 	while (temp->nextEvent->apperanceTime < nextEv->apperanceTime)
 		temp = temp->nextEvent;

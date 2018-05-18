@@ -8,6 +8,11 @@ void PatientQueue::addFirst()
 	FirstPatient = new PatientLink(nullptr);
 }
 
+void PatientQueue::addFirst(int unitOfBloodNeeded)
+{
+	FirstPatient = new PatientLink(nullptr, unitOfBloodNeeded);
+}
+
 bool PatientQueue::isEmpty()
 {
 	return FirstPatient ? false : true;
@@ -25,7 +30,17 @@ void PatientQueue::addPatient()
 	for (temp = FirstPatient;temp->nextPatient;temp=temp->nextPatient)
 	{ }
 	temp->nextPatient = new PatientLink(nullptr);
-	
+}
+
+void PatientQueue::addPatient(int unitOfBloodNeeded)
+{
+	if (isEmpty())
+	{
+		addFirst(unitOfBloodNeeded);
+		return;
+	}
+
+	FirstPatient = new PatientLink(FirstPatient, unitOfBloodNeeded);
 }
 
 void PatientQueue::deletePatient()

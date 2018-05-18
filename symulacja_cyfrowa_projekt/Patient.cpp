@@ -24,6 +24,13 @@ int generator2(double average)
 	std::cout << "Nowy pacjent" << std::endl;
 }
 
+	Patient::Patient(int unitOfBloodNeeded)
+	{
+		ID = ++iDHandler;
+		this->unitOfBloodNeeded = unitOfBloodNeeded;
+		std::cout << "Nowy pacjent" << std::endl;
+	}
+
 Patient::~Patient()
 {
 }
