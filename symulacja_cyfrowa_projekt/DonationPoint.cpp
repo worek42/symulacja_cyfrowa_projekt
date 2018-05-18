@@ -1,18 +1,4 @@
 #include "DonationPoint.h"
-#include "EventsAgenda.h"
-#include "Event.h"
-#include "NewUnitsDeliverenceEvent.h"
-#include "AlertDeliverenceEvent.h"
-#include "DeliverenceEvent.h"
-#include "patientEvent.h"
-#include "donorEvent.h"
-#include "BloodTransfusionEvent.h"
-#include "accidentEvent.h"
-#include <conio.h>
-#include <cstdio>
-#include <time.h>
-#include <iostream>
-
 
 void startParameters(EventsAgenda *agenda)
 {
@@ -33,6 +19,7 @@ void doEvent(Event *temp)
 	temp->run();
 	delete temp;
 }
+
 
 
 void DonationPoint::addNewBlood(int T2)
@@ -77,7 +64,7 @@ void DonationPoint::start()
 
 	startParameters(agenda);
 	
-	while (numberOfAllOrders < 1000)
+	while (numberOfAllOrders < 10)
 	{
 		systemTime = agenda->FirstEvent->nextEvent->apperanceTime;
 		bool systemFlag = true;
@@ -119,11 +106,10 @@ void DonationPoint::start()
 		if (typeOfLoop)
 			getchar();
 	}
-	std::cout << "W magazynie pozostalo " << bloodStorage->getActualBloodUnits() << " jednostek krwi." << std::endl;
-	double result = (numberOfAlertOrders / numberOfAllOrders)*100;
-	printf("Prawdopodobienstwo wystapienia zamowienia awaryjnego wynosi %.2f",result);
-	delete agenda;
 
+	double result = (numberOfAlertOrders / numberOfAllOrders)*100;
+	printf("\nPrawdopodobienstwo wystapienia zamowienia awaryjnego wynosi %.2f%%\n",result);
+	delete agenda;
 }
 
 int DonationPoint::getActualBloodUnits()

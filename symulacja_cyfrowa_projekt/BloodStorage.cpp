@@ -7,7 +7,7 @@ void BloodStorage::addSort(int utilizationTime)
 	BloodUnitLink *temp;
 	for (temp = FirstBloodUnit; temp->nextBloodUnit; temp = temp->nextBloodUnit)
 	{
-		if (temp->nextBloodUnit->getUtilizationTimeFromBloodUnit() > utilizationTime)
+		if (temp->nextBloodUnit->bloodUnit->getUtilizationTime() > utilizationTime)
 			break;
 	}
 	temp->nextBloodUnit = new BloodUnitLink(utilizationTime, temp->nextBloodUnit);
@@ -56,7 +56,7 @@ void BloodStorage::addBloodUnit(int utilizationTime)
 		return;
 	}
 
-	if (FirstBloodUnit->getUtilizationTimeFromBloodUnit() > utilizationTime)
+	if (FirstBloodUnit->bloodUnit->getUtilizationTime() > utilizationTime)
 	{
 		addOnFirstItem(utilizationTime);
 		return;
@@ -66,13 +66,6 @@ void BloodStorage::addBloodUnit(int utilizationTime)
 		addSort(utilizationTime);
 	else
 		addOnBlankSecondItem(utilizationTime);
-}
-
-void BloodStorage::disp()
-{
-	for (BloodUnitLink *temp = FirstBloodUnit; temp; temp = temp->nextBloodUnit)
-		std::cout << temp->getUtilizationTimeFromBloodUnit() << "\t";
-	std::cout << std::endl;
 }
 
 void BloodStorage::deleteFirst()

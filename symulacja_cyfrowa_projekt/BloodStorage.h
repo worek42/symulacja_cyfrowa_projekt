@@ -8,6 +8,7 @@ class BloodStorage
 	int actualBloodUnits;				//aktualna ilosc jednostek krwi
 	bool Order;							//zmienna oznaczajaca zlozenie zamowienia
 	BloodUnitLink *FirstBloodUnit;		//wskaznik na pierwszy element listy
+
 	void addSort(int);					//dodawanie obiektu krwi do listy w trybie posortowanym
 	void addFirst(int);					//dodawanie obiektu krwi do listy na pierwsze miejsce, gdy lista jest pusta
 	void addOnFirstItem(int);			//dodawanie obiektu krwi do listy na pierwsze miejsce, gdy istnieja na liscie obiekty
@@ -18,12 +19,11 @@ public:
 	BloodStorage();
 	bool isOrdered();					//metoda zwracajaca zajetosc zamowienia
 	bool isEmpty();						//metoda sprawdzania czy lista jest pusta
-	bool normalOrderNeeded();					//zamowienie gdy minimal < R && Order
+	bool normalOrderNeeded();			//zamowienie gdy minimal < R && Order
 	void addBloodUnit(int);				//dodanie obiektu krwi do listy
-	void disp();						//sprawdzanie dzialania listy
 	void deleteFirst();					//usuniecie pierwszego pacjenta
 	void changeOrder(bool);				//zmiana zmiennej Order
-	int getActualBloodUnits();
+	int getActualBloodUnits();			//metoda zwracajaca aktualna liczbe jednostek krwi
 	~BloodStorage();
 };
 

@@ -7,7 +7,6 @@ class BloodUnitLink
 
 public:
 
-	int getUtilizationTimeFromBloodUnit();		//metoda zwracajaca czas utylizacji jednostki krwi
 	BloodUnitLink(int,BloodUnitLink*);			
 	~BloodUnitLink();
 

@@ -50,16 +50,9 @@ void PatientQueue::deletePatient()
 	FirstPatient = temp;
 }
 
-void PatientQueue::disp()
-{
-	for (PatientLink *temp = FirstPatient; temp; temp = temp->nextPatient)
-		std::cout << temp->getPatientID() << "\t";
-	std::cout << std::endl;
-}
-
 int PatientQueue::getFirstPatientBlood()
 {
-	return FirstPatient->getBlood();
+	return FirstPatient->patient->getUnit();
 }
 
 PatientQueue::PatientQueue()

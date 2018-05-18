@@ -3,16 +3,16 @@
 class PatientQueue
 {
 	PatientLink *FirstPatient;			//wskaznik na pierwsze pole przechowujace pacjenta
+
 	void addFirst();					//dodanie pierwszego pacjenta
-	void addFirst(int);
+	void addFirst(int);					//dodanie pacjenta z wypadku jako jedynego wystepujacego w kolejce
 
 public:
 	bool isEmpty();						//metoda sprawdza, czy kolejka jest pusta
 	void addPatient();					//dodanie pacjenta na koniec kolejki
-	void addPatient(int);
+	void addPatient(int);				//dodanie pacjenta z wypadku
 	void deletePatient();				//usuniecie pierwszego pacjenta
-	void disp();						//metoda testowa wyswietlajaca
-	int getFirstPatientBlood();			//metoda zwraca ilosc krwi potrzebna pierwszemu pacjentowi
+	int getFirstPatientBlood();			//metoda zwraca liczbe jednostek krwi potrzebna pierwszemu pacjentowi
 	PatientQueue();
 	~PatientQueue();
 };

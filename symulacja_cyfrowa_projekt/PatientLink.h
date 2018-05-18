@@ -6,8 +6,6 @@ class PatientLink
 	PatientLink *nextPatient;		//wskaznik na nastepne pole listy przechowujace pacjenta
 
 public:
-	int getPatientID();				//pozyskanie ID pacjenta
-	int getBlood();					//pozyskanie ilosci krwi potrzebnej pacjentowi
 	PatientLink(PatientLink*);
 	PatientLink(PatientLink*, int);
 	~PatientLink();
